@@ -5,6 +5,10 @@ const username = registrationForm.username.value;
 //console.log(username);
 const password = registrationForm.password.value;
 const passwordCheck = registrationForm.passwordCheck.value;
+const login = document.getElementById("login");
+const username2 = login.username.value;
+const password2 = login.password.value;
+
 
 registrationForm.terms.addEventListener("change", () => {
     if (!isChecked(registrationForm.terms)) {
@@ -79,6 +83,13 @@ if (password.length < 12) {
         }
       }
     }
+  }
+  //login username  and password
+  if (username2.trim() === "") {
+    alert("Username cannot be blank.");
+  }
+  if (password2.trim() === "") {
+    alert("Password cannot be blank.");
   }
     e.preventDefault();
 
